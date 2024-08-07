@@ -19,9 +19,9 @@ public class Aluno {
         this.peso = peso;
     }
 
-    public Aluno (String nome, String graduacao, Date nascimento) {
-        this(nome, graduacao, nascimento);
-    }
+  //  public Aluno (String nome, String graduacao, Date nascimento) {
+    //    this(nome, graduacao, nascimento);
+    //}
 
     public String getNome() {
         return nome;
