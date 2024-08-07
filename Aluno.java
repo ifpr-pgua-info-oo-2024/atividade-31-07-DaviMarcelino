@@ -1,4 +1,4 @@
-import java.sql.Date;
+import java.util.Date;
 
 public class Aluno {
 
@@ -6,10 +6,10 @@ public class Aluno {
     private String graduacao;
     private String genero;
     private Date nascimento;
-    private Double altura;
-    private Double peso;
+    private double altura;
+    private double peso;
 
-    public Aluno (String nome, String graduacao, Date nascimento, String genero, int i, int j) {
+    public Aluno (String nome, String graduacao, Date nascimento, String genero, double altura, double peso) {
 
         this.nome = nome;
         this.graduacao = graduacao;
@@ -19,9 +19,9 @@ public class Aluno {
         this.peso = peso;
     }
 
-  //  public Aluno (String nome, String graduacao, Date nascimento) {
-    //    this(nome, graduacao, nascimento);
-    //}
+    public Aluno(String nome, String graduacao, Date nascimento) {
+    this(nome, graduacao, nascimento,"",0,0);
+    }
 
     public String getNome() {
         return nome;
@@ -55,20 +55,27 @@ public class Aluno {
         this.genero = genero;
     }
 
-    public Double getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(Double altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 
-    public Double getPeso() {
+    public double getPeso() {
         return peso;
 
     }
 
-    public void setPeso(Double peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
+
+    @Override
+    public String toString() {
+        return "Aluno [nome=" + nome + ", graduacao=" + graduacao + ", genero=" + genero + ", nascimento=" + nascimento
+                + ", altura=" + altura + ", peso=" + peso + "]";
+    }
+
 }
