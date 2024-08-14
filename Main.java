@@ -14,14 +14,14 @@ public class Main {
          academia1.setTelefone("+55 41 99109-4358");
 
 
-        Aluno aluno1 = new Aluno("Davi", "Médio", ConveterData("12/07/2007"));
+        Aluno aluno1 = new Aluno("Davi", "Médio","12/07/2007");
         academia1.alunos.add(aluno1);
 
-        Aluno aluno2 = new Aluno("Davi", "Médio", ConveterData("12/07/2007"));
+        Aluno aluno2 = new Aluno("Davi", "Médio", "12/07/2007");
         academia1.alunos.add(aluno2);
 
         
-        academia1.alunos.add(new Aluno("Davi", "Médio", ConveterData("12/07/2007")));
+        academia1.alunos.add(new Aluno("Davi", "Médio", ("12/07/2007")));
 
         for (Aluno aluno : academia1.getAlunos()) {
 
@@ -37,11 +37,11 @@ public class Main {
          academia2.setEndereço("Rua das Rosas N°4560");
          academia2.setTelefone("+55 41 99109-4358");
 
-         academia2.alunos.add(new Aluno("Davi", "Médio", ConveterData("12/07/2007")););
+         academia2.alunos.add(new Aluno("Davi", "Médio","12/07/2007"));
  
-         academia2.alunos.add(new Aluno("Davi", "Médio", ConveterData("12/07/2007")););
+         academia2.alunos.add(new Aluno("Davi", "Médio", ("12/07/2007")));
          
-         academia2.alunos.add(new Aluno("Davi", "Médio", ConveterData("12/07/2007")));
+         academia2.alunos.add(new Aluno("Davi", "Médio", ("12/07/2007")));
  
          for (Aluno aluno : academia2.getAlunos()) {
  
@@ -51,7 +51,7 @@ public class Main {
     }
 
 
-    public static Date ConveterData(String nascimento) throws ParseException {
+    public static Date Data(String nascimento) throws ParseException {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         return formato.parse(nascimento);
         
